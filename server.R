@@ -48,7 +48,7 @@ density_data <- function(d, bins) {
 
 shinyServer(function(input, output, session) {
     
-  all_coaches <- names(h5dump("data/rankings.h5", recursive = 2, datasetinfo = T, load = F)$coaches)
+  all_coaches <- readRDS("data/coaches.rds")
   
   observeEvent(all_coaches, updateSelectizeInput(session, "player", choices = c("Select Player" = "", all_coaches), server = T))
   
