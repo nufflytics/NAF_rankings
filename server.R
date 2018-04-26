@@ -62,6 +62,8 @@ shinyServer(function(input, output, session) {
   
   bins <- reactive({input$bins}) %>% debounce(500)
   
+  
+  
     player_data <- reactive({
       validate(need(input$player, message = F))
       
@@ -84,10 +86,8 @@ shinyServer(function(input, output, session) {
       ranking_data
     })
   
-    output$debug <- renderText(excl())
-    output$debug2 <- renderText(input$excl_races)
-    
     player_races <- reactive({
+      validate(need(input$player, message = F))
       unique(player_data()$race) %>% sort
     })
     
