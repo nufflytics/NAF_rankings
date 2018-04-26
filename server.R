@@ -10,6 +10,8 @@ library(rhdf5) # to load the .h5 data file
 library(tidyverse)
 library(nufflytics)
 
+extrafont::loadfonts(quiet = T)
+
 theme_nufflytics <- function(...) {
   ggplot2::theme_linedraw(base_family = "Open Sans Condensed Bold", ...) +
     ggplot2::theme(plot.subtitle = ggplot2::element_text(family = "Open Sans Condensed Light"),
