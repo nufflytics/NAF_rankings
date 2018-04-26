@@ -76,7 +76,7 @@ tagList(
                          )
         ),
       mainPanel(width = 9,
-                plotOutput("plot") %>% withSpinner(type = 3, color = "#3c3b3b",  color.background = "#f4f4f4")
+                 withSpinner(plotOutput("plot"), type = 3, color = "#3c3b3b",  color.background = "#f4f4f4")
         )
     )
   ),
