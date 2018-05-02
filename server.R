@@ -9,6 +9,7 @@ library(shiny)
 library(rhdf5) # to load the .h5 data file
 library(tidyverse)
 library(nufflytics)
+library(Cairo)
 
 extrafont::loadfonts(quiet = T)
 
