@@ -9,9 +9,10 @@ library(shiny)
 library(rhdf5) # to load the .h5 data file
 library(tidyverse)
 library(nufflytics)
-library(Cairo)
 
 extrafont::loadfonts(quiet = T)
+
+options(shiny.usecairo=FALSE)
 
 theme_nufflytics <- function(...) {
   ggplot2::theme_linedraw(base_family = "Open Sans Condensed Bold", ...) +
